@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+
+    <body style="background-color:rgb(27, 146, 232);">
+        
+            <fieldset style="background-color:BCD1FD;">
+
+                <legend  style="color:rgb(255, 255, 255); background-color:rgb(53, 122, 127) ;"><h4>Student Data</h4></legend><br/>
+
+                <fieldset style=" background-color:rgb(78, 198, 216);"><br/>
+                    <legend style="height: 90px; background-color:D8CBAC;"><br/><br/>Personal information</legend>
+
+                    <label for="Fname">First name &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp;  </label>
+                    <input id="Fname" placeholder="FirstName" name="Fname" required style="width: 180px;"/><br/><br/>
+
+                    <label for="Sname">Second name &nbsp; &nbsp;: &nbsp; </label>
+                    <input id="Sname" placeholder="SecondName" name="Sname" required style="width: 180px;"/><br/><br/>
+
+                    <label for="ID">ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;:&nbsp;   </label>
+                    <input id="ID" type="number" name="ID" placeholder="ID" required style="width: 180px;"/><br/><br/>
+                
+                    <label for="phone">Your Phone&nbsp; &nbsp; &nbsp;&nbsp; :&nbsp;</label>
+                    <input id="phone" type="number" name="phone" placeholder="Phone" required style="width: 180px;"/><br/><br/>
+
+                    <label for="address">Address&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp; </label>
+                    <input id="Address" type="text" name="address"placeholder="Address" required style="width: 180px;"/><br/><br/>
+
+                    <label for="Level">Level &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;:&nbsp;   </label>
+                    <input id="Level" type="number" min="1" max="5" name="Level" placeholder="Level" required  style="width: 180px;"/><br/><br/>
+
+                    <label for="email">E-mail&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp; </label>
+                    <input id="email" type="email" name="email" placeholder="E-Mail" required style="width: 180px;"/><br/><br/>
+
+                    <label for="Departement">Departement&nbsp;&nbsp; &nbsp;:&nbsp;  </label>
+                    <input id="Departement" type="text" name="Departement" placeholder="Departement" required style="width: 180px;"/><br/><br/>
+
+                    <label for="B">Birthday date&nbsp; :&nbsp; </label>
+                    <input style="width: 170;" id="B" type="date" required style="width: 180px;" /><br/><br/>
+                <br/>
+
+                <!--Gender-->
+                <fieldset style=" height: 50px">
+                    <legend style=" color: black; background-color:white ;"> Gender</legend>
+                        <input id="male" type="radio" name="gender" value="male"/>
+                        <label for="male">male</label><br/>
+                
+                        <input id="fmale" type="radio" name="gender" value="fmale"/>
+                        <label for="fmale">fmale</label><br/><br/><br/>
+                </fieldset>
+                <br/>
+
+                <!--Status-->
+                <fieldset>
+                    <legend style=" color: black; background-color:white ;"> Status</legend>
+                        <input id="active" type="radio" name="Status" value="active"/>
+                        <label for="active">active</label><br/>
+
+                        <input id="inactive" type="radio" name="Status" value="inactive"/>
+                        <label for="inactive">inactive</label><br/>
+                </fieldset>
+                <br/><br/>
+                <input name="submit" type="submit" value="Submit">
+                <!-- <button type="submit">Submit</button> -->
+                <br/><br/><br/><br/>
+            </fieldset>
+
+        </body>
+</html>
