@@ -1,0 +1,76 @@
+
+<html>
+<head>
+    <title>  
+        Edit Student Data
+    </title>
+</head>
+<body>
+    <h1> Edit Exisiting Student Data </h1>
+
+    <div class="topnavbar">
+        <a class="active" href="homepage">Homepage</a>
+        <a href="Add New Student">Add New student</a>
+        <a href="students-data">Students Data</a>
+        <a href="Editpage">Edit Existing Data</a>
+        <a href="assign-department">Assign Student Department </a>
+        <a href="active-inactive-students">Active/inactive Students</a>
+    </div>
+
+    <br>
+    <p> Name: </p> 
+    <input type="text">
+
+    <p> Date of Birth : </p> 
+    <input type="date">
+
+    <p> Gender: </p> 
+    <input type="radio" id="child" name="age" value="Male">
+    <label for="Male">Male</label><br>
+    <input type="radio" id="adult" name="age" value="Female">
+    <label for="Female">Female</label><br>
+
+    <p> ID: </p> 
+    <input type="text">
+
+    <p> Email:</p> 
+    <input type="text">
+
+    <p> Mobile Number:</p> 
+    <input type="text">
+
+    <p> level: </p> 
+    <select >
+        <option > Year 1</option>
+        <option > Year 2</option>
+        <option > Year 3</option>
+        <option > Year 4</option>
+    </select> 
+
+    <p> GPA:</p> 
+    <input type="text">
+
+    <p> Active student: </p>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
+
+    <p> Departement:</p> 
+    <input type="text" readonly >
+    <button onclick= " location.href='assign-department'; " > Set Departement <i class='fas fa-edit'></i> </button>
+
+    <br>
+    <br>
+
+    <button name="Save"> Save </button>
+    <button onclick="myFunction()">  Delete </button>
+    <script> function myFunction() {
+    confirm("Are you sure you want to delete the student record? ");}
+    </script>
+
+
+</body>
+</html>
+
+
