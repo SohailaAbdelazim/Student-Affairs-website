@@ -1,0 +1,132 @@
+/* body,html{
+    scroll-behavior: smooth;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+} */
+
+body{
+    background-color: #f3faee;
+    background-repeat:no-repeat;
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+}
+
+header>div>span{
+    background-color: #132666;
+    color: white;
+    font-size: 18px;
+    display: inline-block;  
+    vertical-align: top; 
+    padding-top: 10px;
+    
+}
+header, header>div{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+header>div{
+    background-color: #132666;
+    display: inline-block;
+    margin: 0;
+}
+header>div>img{
+    width: 50px;
+    height: 40px;
+    
+}
+
+header>div>button{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+header>div>button>img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+
+.above-nav{
+    padding: 0;
+    margin: 0;
+    width: 59%;
+    display: inline;
+}
+.above-nav h1{
+    margin: 10px;
+    padding: 10px;
+    color: #132666;
+    display: inline-block;
+    font-size: 50px;
+}
+.above-nav img{
+    height:110px;
+    width: 110px;
+    margin-left: 50px;
+}
+
+
+/* Section above-nav */
+
+.above-nav {
+    background-color: white;
+}
+
+.above-nav > figure {
+    display:inline-block;
+    width:fit-content;
+    border: 1px #cccccc solid;
+    padding: 4px;
+    margin: auto;
+    size: fill;
+}
+
+.above-nav > p {
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+/* nav-bar */
+
+nav {
+    background-color: #1d3557;
+}
+
+header > nav > a {
+    display:inline-block;
+    margin: 10px 40px;
+    margin-left: 100px;
+    padding-top: 10px;
+    width:fit-content;
+    text-decoration: none;
+    font-family:sans-serif;
+    color: white;
+    border-top: solid #1d3557 5px;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cyan;
+    background-color: transparent;
+    text-decoration: none;
+    border-top: solid white 5px;
+}
+
+
