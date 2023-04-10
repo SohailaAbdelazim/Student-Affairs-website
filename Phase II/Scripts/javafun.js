@@ -1,3 +1,9 @@
+/* This is the main java script file for our project */ 
+
+/*
+    scripts for navigation bar
+*/
+
 function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -11,7 +17,7 @@ window.onclick = function(event) {
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
+            }
         }
-    }
     }
 }

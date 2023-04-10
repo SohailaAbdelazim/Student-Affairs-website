@@ -1,0 +1,207 @@
+/* This is the main css file for our project */ 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+/* navigation bar */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #295387;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    position: relative;
+}
+
+nav a {
+    color: #f3faee;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a8dadb;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #f3faee;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.logo img {
+    float: left;
+    padding: 10px 0;
+    width: 200px;
+    height: 50px;
+}
+
+/*
+    css for the login page
+*/
+
+.login-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.login-body {
+    background-color: #f0faef;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    background: #a8dadb;
+    padding: 50px 60px 70px;
+    text-align:center;
+}
+
+.form-box p {
+    text-align: left;
+    margin-left: 45px;
+}
+
+.form-box h1 {
+    text-align:center;
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #1d3557;
+    position: relative;
+}
+
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #e53945;
+    position:absolute;
+    bottom:-12px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.input-field {
+    /* background: #eaeaea; */
+    margin: 15px 0;
+    border-radius: 3px;
+    /* align-items: center; */
+}
+
+.login-input {
+    /* width: 100%; */
+    /* background: transparent; */
+    border: 0;
+    outline: 0;
+    padding: 8px 55px; 
+    font-size: 14px;
+}
+
+.input-field i {
+    padding-left: 20px;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    margin-left: 25%;
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background: #1d3557;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.input-group {
+    height: 220px;
+}
+
+/* --------------------------------------- */
+
+/* 
+    css for homepage 
+*/
+
+.dropbtn {
+    background-color: #295387;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display:block;
+}
