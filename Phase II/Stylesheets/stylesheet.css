@@ -68,9 +68,100 @@ nav a:hover::before {
     height: 50px;
 }
 
-/*
-    css for the login page
-*/
+/* --------------------------------- css for websitepage ---------------------------- */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f3faee;
+    background-repeat: no-repeat;
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
+  .row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+  }
+  
+  .col {
+    flex-basis: 50%;
+  }
+  
+  h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+  
+  h5 {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 15px 20px;
+    background-color: antiquewhite;
+    transition: transform 0.5s;
+  }
+  
+  .card p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #281aac;
+  }
+  
+  .card:hover {
+    transform: translateY(-15px);
+  }
+  
+  /* .card1 {
+    background-image: url(/imgs/download.jpg);
+    background-position: center;
+  }
+  .card2 {
+    background-image: url(/imgs/download1.png);
+    background-position: center;
+  
+  }
+  .card3 {
+    background-image: url(/imgs/download3.png);
+    background-position: center;
+  }
+  .card4 {
+    background-image: url(/imgs/download.jpg);
+    background-position: center;
+  } */
+
+
+
+/* ------------------------------- css for the login page -------------------------------------- */
 
 .login-body {
     margin: 0;
@@ -164,9 +255,7 @@ nav a:hover::before {
 
 /* --------------------------------------- */
 
-/* 
-    css for homepage 
-*/
+/* -------------------------------------------  css for main homepage ---------------------------------- */
 
 .dropbtn {
     background-color: #295387;
@@ -205,3 +294,427 @@ nav a:hover::before {
 .show {
     display:block;
 }
+
+
+/* ------------------------------ css for add new student --------------------------------- */ 
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #1d3557;
+}
+
+header > p {
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+/* body,html{
+    scroll-behavior: smooth;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+} */
+
+body {
+  background-color: #f3faee;
+  background-repeat: no-repeat;
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #295387;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: #f3faee;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #a8dadb;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #f3faee;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+img {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  height: 70px;
+}
+
+/* Insert Box */
+.insert-box {
+  width: 700px;
+  height: 793px;
+  padding: 40px;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(56, 53, 53, 0.577);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.insert-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.insert-box .user-box {
+  position: relative;
+}
+
+.insert-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.insert-box .user-box input:focus ~ label,
+.insert-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ece4de;
+  font-size: 12px;
+}
+
+.insert-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1d3557;
+  background-color: #a8dadb;
+  font-size: 16px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 1s;
+  /* margin-top: 40px; */
+  margin-bottom: 60px;
+  letter-spacing: 4px;
+  border: none;
+  outline: none;
+}
+
+form button:hover {
+  background-color: #1d3557;
+  color: #fff;
+  cursor: pointer;
+}
+
+select {
+  width: 70px;
+  height: 20px;
+  position: relative;
+  top: auto;
+  bottom: 10px;
+  left: 150px;
+  background-color: #a8dadb;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.user-boxx {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+
+/* ----------------------------------------------   css for  EDIT STUDENT                  --------------------------------- */ 
+
+body{
+    background-color: #f3faee;
+}
+
+li{
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #295387;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: #f3faee;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #a8dadb;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #f3faee;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.logo img {
+  float: left;
+  padding: 10px 0;
+  width: 200px;
+  height: 50px;
+}
+
+form {
+  width: 40%;
+  margin: auto;
+}
+
+label {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+  margin-right: 5%;
+  margin-bottom: 10px;
+
+}
+
+input{
+  display: inline-block;
+  width: 60%;
+  margin-bottom: 10px;
+
+}
+
+#button {
+  text-align: left;
+  width: auto;
+  margin-right: 0;
+}
+
+
+.button {
+  text-align:center;
+  margin-top: 20px;
+}
+
+
+.save {
+  text-align:center;
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #a8dadb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+#delete {
+  text-align:center;
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #e53945;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* ------------------------  slider button of active student -------------------- */ 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* to Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #457b9d;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #a8dadb;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #a8dadb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* --------------------------------------------         ------------------------------ */ 

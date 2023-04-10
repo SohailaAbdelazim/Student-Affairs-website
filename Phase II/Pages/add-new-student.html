@@ -3,39 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New Student</title>
-    <nav>
-      <a style="color: blue;" href="homepage.html">Home</a>
-      <a style="color: blue;" href="add-new-student.html">Add Student</a>
-      <a style="color: blue;" href="students-data.html">Students Data</a>
-      <a style="color: blue;" href="edit-student.html">Edit Student</a>
-      <a style="color: blue;" href="assign-department.html">Assign Department</a>
-      <a style="color: blue;" href="active-inactive-students.html">Active/Inactive Students</a>
-      <a style="color: blue;" href="admin-data.html">Admin Data</a>
-    </nav>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../Stylesheets/stylesheet.css" />
   </head>
+  <header>
+    <div class="logo">
+      <img src="../../Phase II/imgs/logo.png" alt="Logo">
+    </div>
+    <div class="container">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="homepage.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
+          </li>
+          <li>
+            <a href="add-new-student.html"
+              ><i class="fa fa-user-plus"></i> Add New student</a
+            >
+          </li>
+          <li>
+            <a href="students-data.html"
+              ><i class="fa fa-folder"></i> Students Data</a
+            >
+          </li>
+          <li>
+            <a href="assign-department.html"
+              ><i class="fa fa-edit"></i> Assign Department
+            </a>
+          </li>
+          <li>
+            <a href="active/inactive-students.html"
+              ><i class="fa fa-toggle-on"></i> Active/inactive Students</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <body>
     <div class="insert-box">
-      <h2>Insert Student</h2>
+      <h2>Add New Student</h2>
       <form method="POST" action="" enctype="multipart/form-data">
         <div class="user-box">
+          <input type="text" required value="" />
           <label>Name</label>
-          <input type="text" required value="" />
         </div>
         <br />
         <div class="user-box">
-          <label>Date of Birth</label>
           <input type="date" required value="" />
+          <label>Date of Birth</label>
         </div>
         <br />
         <div class="user-box">
+          <input type="number" required value="" max="4" />
           <label>GPA</label>
-          <input type="text" required value="" />
         </div>
         <br />
-        <div class="user-box">
-         <label>Gender</label>
+        <div class="user-boxx">
+          <label>Gender: </label>
           <input id="FR" type="radio" name="ma" value="M" />
           <label for="FR">Male</label>
           <input id="BE" type="radio" name="ma" value="F" />
@@ -43,7 +73,7 @@
         </div>
         <br />
         <div class="user-box">
-          <label>Level</label>
+          <label>Level: </label>
           <select name="level">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -52,8 +82,8 @@
           </select>
         </div>
         <br />
-        <div class="user-box">
-          <label>Status</label>
+        <div class="user-boxx">
+          <label>Status: </label>
           <input id="FR" type="radio" name="BE" value="active" />
           <label for="FR">Active</label>
           <input id="BE" type="radio" name="BE" value="inactive" />
@@ -61,24 +91,25 @@
         </div>
         <br />
         <div class="user-box">
-          <label>Department</label>
           <select name="level">
+            <option value="c">Genral</option>
             <option value="c">CS</option>
             <option value="s">IS</option>
             <option value="a">AI</option>
             <option value="i">IT</option>
             <option value="d">DS</option>
           </select>
+          <label>Department: </label>
         </div>
         <br />
         <div class="user-box">
+          <input type="email" required value="" />
           <label>Email</label>
-          <input type="text" required value="" />
         </div>
         <br />
         <div class="user-box">
+          <input type="phone" required value="" />
           <label>Phone Number</label>
-          <input type="text" required value="" />
         </div>
         <button name="submit">Submit</button>
         <button name="reset" value="Reset">Reset</button>
