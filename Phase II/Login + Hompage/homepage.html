@@ -3,29 +3,34 @@
         <meta charset="UTF-8"/>
         <title>HomePage</title>
         <link rel="stylesheet" href="./homepage-styles.css">
+        <script src="https://kit.fontawesome.com/1457508b99.js" crossorigin="anonymous"></script>
+        <script src="./scripts.js"></script>
     </head>
     <body>
         <header>
-            <div>
-                <button onclick="openNav()">
-                    <img src="../Phase I/imgs/menu.png" alt="Menu" width="20" height="20">
-                </button>
-                <img src="https://cu.edu.eg/ar/images/demo/slideshow/img1.png" alt="Cairo University"/>
-                    <span>Cairo University</span>
+            <div class="logo">
+                <img src="../../Phase I/imgs/logo.jpg" alt="Logo">
             </div>
+    
+            <div class = "container"> 
 
-        <section class="above-nav">
-            <img src="../Phase I/imgs/logo.jpeg" alt="FCAI-CU"/>
-            <h1>Faculty of  Computers <br> and Artifical Intelligence</h1>
-        </section>
-            <nav>
-                <a href="homepage.html">Home</a>
-                <a href="add-new-student.html">Add Student</a>
-                <a href="students-data.html">Students Data</a>
-                <a href="assign-department.html">Assign Department</a>
-                <a href="active-inactive-students.html">Active/Inactive Students</a>
-                <a href="admin-data.html">Admin Data</a>
-            </nav> 
+                <nav class = "navbar">
+                    <ul> 
+                        <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Homepage</a> </li>
+                        <li> <a href="add-new-student.html"><i class="fa fa-user-plus"></i> Add New student</a> </li>   
+                        <li> <a href="students-data.html"><i class="fa fa-folder"></i> Students Data</a> </li>
+                        <li> <a href="assign-department.html"><i class="fa fa-edit"></i> Assign Department </a> </li>  
+                        <li> <a href="active/inactive-students.html"><i class="  fa fa-toggle-on"></i> Active/inactive Students</a> </li> 
+                        </li>
+                    </ul>
+                </nav> 
+            </div> 
+            <div class="dropdown">
+                <button type = "button" onclick="dropdown()" class="dropbtn"><i class="fa-regular fa-user"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="./login.html">Logout</a>
+                </div>
+            </div>
         </header>
     </body>
 </html>

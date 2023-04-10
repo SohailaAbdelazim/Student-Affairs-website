@@ -1,132 +1,113 @@
-/* body,html{
-    scroll-behavior: smooth;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-} */
-
-body{
-    background-color: #f3faee;
-    background-repeat:no-repeat;
-    height: 90%;
-    background-position: center;
-    background-size: cover;
-    margin: 0;
-    width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-header>div>span{
-    background-color: #132666;
-    color: white;
-    font-size: 18px;
-    display: inline-block;  
-    vertical-align: top; 
-    padding-top: 10px;
-    
-}
-header, header>div{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-header>div{
-    background-color: #132666;
-    display: inline-block;
-    margin: 0;
-}
-header>div>img{
-    width: 50px;
-    height: 40px;
-    
+header {
+    background: #295387;
 }
 
-header>div>button{
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-    color: white;
+header::after {
+    content: '';
+    display: table;
+    clear: both;
 }
-header>div>button>img{
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-}
-
-
-.above-nav{
-    padding: 0;
-    margin: 0;
-    width: 59%;
-    display: inline;
-}
-.above-nav h1{
-    margin: 10px;
-    padding: 10px;
-    color: #132666;
-    display: inline-block;
-    font-size: 50px;
-}
-.above-nav img{
-    height:110px;
-    width: 110px;
-    margin-left: 50px;
-}
-
-
-/* Section above-nav */
-
-.above-nav {
-    background-color: white;
-}
-
-.above-nav > figure {
-    display:inline-block;
-    width:fit-content;
-    border: 1px #cccccc solid;
-    padding: 4px;
-    margin: auto;
-    size: fill;
-}
-
-.above-nav > p {
-    display: inline-block;
-    text-align: center;
-}
-
-
-
-/* nav-bar */
 
 nav {
-    background-color: #1d3557;
+    float: center;
 }
 
-header > nav > a {
-    display:inline-block;
-    margin: 10px 40px;
-    margin-left: 100px;
-    padding-top: 10px;
-    width:fit-content;
+nav ul {
+    margin: 0;
+    padding-right: 100;
+    list-style: none;
+    width:100%;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    position: relative;
+}
+
+nav a {
+    color: #f3faee;
     text-decoration: none;
-    font-family:sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a8dadb;
+}
+
+nav a::before {
+    content: '';
+    display: inline-block;
+    height: 5px;
+    background-color: #f3faee;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.logo img {
+    float: left;
+    padding: 10px 0;
+    width: 200px;
+    height: 50px;
+}
+
+/* ------------------------ */
+.dropbtn {
+    background-color: #295387;
     color: white;
-    border-top: solid #1d3557 5px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
-a:link {
-    color: white;
-    background-color: transparent;
+  /* Dropdown button on hover & focus */
+/* .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  } */
+
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+  /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
 }
 
-a:hover {
-    color: cyan;
-    background-color: transparent;
-    text-decoration: none;
-    border-top: solid white 5px;
-}
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
 
-
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
