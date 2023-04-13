@@ -1,0 +1,188 @@
+<html>
+    <head>
+      <meta charset="UTF-8"/>
+      <link rel="stylesheet" href="../CSS/basmala.css">
+      <script src="../js/students-data.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="clr"></div>
+    </head>
+    <body>
+      <header> 
+        <div class="logo">
+          <img src="../photos/Logo.jpg" alt="Logo">
+      </div>
+        <div class = "container"> 
+          <nav class = "navbar">
+            <ul> 
+              <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Homepage</a> </li>
+              <li> <a href="add-new-student.html"><i class="fa fa-user-plus"></i> Add New student</a> </li>   
+              <li> <a href="students-data.html"><i class="fa fa-folder"></i> Students Data</a> </li>
+              <li> <a href="assign-department.html"><i class="fa fa-edit"></i> Assign Department </a> </li>  
+              <li> <a href="active-inactive-students.html"><i class="  fa fa-toggle-on"></i> Active/inactive Students</a> </li> 
+            </ul>
+          </nav> 
+        </div>
+        <div class="clr"></div>
+    </header>
+      <h3 class="tableName">Students Data</h2>
+        <table class="table" style="width:99%" id="myTable">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>ID</th>
+              <th>GPA</th>
+              <th>Level </th>
+              <th>Departement</th>
+              <th>Phone</th>
+              <th>Birth Day</th>
+              <th>Address</th>
+              <th ></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20250023</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20253365</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20257789</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20253675</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20250004</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20259788</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="myfunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20239879</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20258888</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20254478</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+            <tr>
+              <td>Ahmed Mahmoud</td>
+              <td>20255265</td>
+              <td>3.8</td>
+              <td> 3</td>
+              <td>AI</td>
+              <td>01956325496</td>
+              <td>25/10/2158</td>
+              <td>el4e5 zayed</td>
+                <td>
+                  <a class="centerLink" href="add-new-student.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
+                  <a class="centerLink"><button class="Delet-S" value="Delete" onclick="deleteFunction(this)"><i class="fa fa-fw fa-trash"></i></button></a>
+                </td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+        <div class="clr"></div>
+    </body>
+</html>
