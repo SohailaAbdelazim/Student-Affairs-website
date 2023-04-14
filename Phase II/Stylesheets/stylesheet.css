@@ -1,88 +1,108 @@
 /* This is the main css file for our project */ 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-
-/* navigation bar */
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* common to all pages : */
+* {
+  margin: 0;
+  padding: 0;
+  /*font-family: "Poppins", sans-serif;*/
+  font-family: 'Work Sans'; 
+  box-sizing: border-box;
+}
+body {
+  background-color: #edf3f8;
+  background-repeat: no-repeat;
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  width: 100%;
+}
+ul {
+  list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+
 header {
-    background: #295387;
+  background: #295387;
+
+}
+
+header > p {
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+  text-transform: uppercase;
 }
 
 header::after {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
 nav {
-    float: center;
+  float: center;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 23px;
-    position: relative;
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
 }
 
 nav a {
-    color: #f3faee;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+  color: #f3faee;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 nav a:hover {
-    color: #a8dadb;
+  color: #a8dadb;
 }
 
 nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #f3faee;
-    position: absolute;
-    top: 0;
-    width: 0%;
-    transition: all ease-in-out 250ms;
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #f3faee;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 .logo img {
-    float: left;
-    padding: 10px 0;
-    width: 200px;
-    height: 50px;
+  float: left;
+  padding: 10px ;
+  width: 200px;
+  height: 70px;
 }
 
-/* --------------------------------- css for websitepage ---------------------------- */ 
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #f3faee;
+/* --------------------------------- css for websitepage ---------------------------- */   
+  .mainbody {
+    /*background-image: url(../imgs/background.jpg);*/
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #d8e8f5;
     height: 90%;
-    background-position: center;
-    background-size: cover;
+    background-position: left;
     margin: 0;
     width: 100%;
   }
@@ -95,28 +115,37 @@ nav a:hover::before {
   }
   
   .row {
-    display: flex;
+    /*display: flex;*/ 
     height: 88%;
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   
-  .col {
-    flex-basis: 50%;
+  .col:last-child {
+   /* flex-basis: 50%; */ 
+   display: grid;
+   grid-template-columns: 1fr 1fr;
   }
+  
   
   h1 {
     font-size: 50px;
     padding-bottom: 10px;
+    color: #1d3557;
   }
   
   h5 {
     font-size: 15px;
     padding-bottom: 10px;
+    text-align: center;
+    color: #1d3557;
   }
   
   p {
     font-size: 15px;
     line-height: 20px;
+    color: #457b9d;
   }
   
   .card {
@@ -127,38 +156,95 @@ nav a:hover::before {
     padding: 15px 25px;
     cursor: pointer;
     margin: 15px 20px;
-    background-color: antiquewhite;
+    background-color: #cedded;
     transition: transform 0.5s;
   }
   
   .card p {
     font-size: 12px;
     line-height: 20px;
-    color: #281aac;
+    color: #457b9d;
+    text-align: center;
   }
   
   .card:hover {
     transform: translateY(-15px);
+
   }
   
-  /* .card1 {
-    background-image: url(/imgs/download.jpg);
+  .card1{
+    background-image: url(../imgs/card1.jpg);
     background-position: center;
+    background-size: cover;
   }
+
   .card2 {
-    background-image: url(/imgs/download1.png);
+    background-image: url(../imgs/card2.jpg);
     background-position: center;
+    background-size: cover;
   
   }
+
   .card3 {
-    background-image: url(/imgs/download3.png);
+    background-image: url(../imgs/card3.jpg);
     background-position: center;
+    background-size: cover;
   }
   .card4 {
-    background-image: url(/imgs/download.jpg);
+    background-image: url(../imgs/card4.jpg);
     background-position: center;
-  } */
+    background-size: cover;
 
+  } 
+
+  .card {
+    cursor: pointer;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    text-align: center;
+  }
+  .card .fadedbox {
+    background-color: #cedded;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding: 130px 20px;
+  }
+  .card:hover .fadedbox {
+    opacity: 0.8;
+  }
+  .card .text {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+  }
+  .card .text {
+    font-size: 2.5em;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+  }
+  .card:hover .text,
+  .card:focus .text {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
 
 
 /* ------------------------------- css for the login page -------------------------------------- */
@@ -296,137 +382,28 @@ nav a:hover::before {
 }
 
 
-/* ------------------------------ css for add new student --------------------------------- */ 
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-
-header {
-  background-color: #1d3557;
-}
-
-header > p {
-  color: white;
-  font-size: 22px;
-  padding: 5px;
-  text-transform: uppercase;
-}
-
-/* body,html{
-    scroll-behavior: smooth;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-} */
-
-body {
-  background-color: #f3faee;
-  background-repeat: no-repeat;
-  height: 90%;
-  background-position: center;
-  background-size: cover;
-  margin: 0;
-  width: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-header {
-  background: #295387;
-}
-
-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-nav {
-  float: center;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-  position: relative;
-}
-
-nav a {
-  color: #f3faee;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #a8dadb;
-}
-
-nav a::before {
-  content: "";
-  display: block;
-  height: 5px;
-  background-color: #f3faee;
-  position: absolute;
-  top: 0;
-  width: 0%;
-  transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-  width: 100%;
-}
-
-img {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  height: 70px;
-}
+/* ------------------------------ common css for add new student + edit  --------------------------------- */ 
 
 /* Insert Box */
 .insert-box {
-  width: 700px;
-  height: 793px;
+  justify-content: center;
+  margin: 80px 40px;
+  width: 800px;
+  height: 920px;
   padding: 40px;
   position: absolute;
   top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(56, 53, 53, 0.577);
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  background:  #cedded;
+  box-shadow: 0 15px 15px #457b9d;
   border-radius: 20px;
+  margin-top: 50px;
 }
-
 .insert-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: #457b9d;
   text-align: center;
 }
 
@@ -438,10 +415,10 @@ img {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #1d3557;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #1d3557;
   outline: none;
   background: transparent;
 }
@@ -452,7 +429,7 @@ img {
   left: 0;
   padding: 10px 0;
   font-size: 18px;
-  color: #fff;
+  color: #1d3557;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -461,7 +438,7 @@ img {
 .insert-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #ece4de;
+  color: #1d3557;
   font-size: 12px;
 }
 
@@ -469,24 +446,32 @@ img {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #1d3557;
-  background-color: #a8dadb;
-  font-size: 16px;
+  color: #fff;
+  background-color: #1d3557;
+  font-size: 20px;
   border-radius: 20px;
   overflow: hidden;
   transition: 1s;
-  /* margin-top: 40px; */
   margin-bottom: 60px;
   letter-spacing: 4px;
   border: none;
   outline: none;
+  text-align:center;
+  margin-left: 10px;
 }
 
 form button:hover {
-  background-color: #1d3557;
+  background-color: #067606be;
   color: #fff;
   cursor: pointer;
 }
+
+.delete:hover{
+  background-color: rgba(167, 0, 0, 0.963);
+  color: #fff;
+  cursor: pointer;
+}
+
 
 select {
   width: 70px;
@@ -495,7 +480,7 @@ select {
   top: auto;
   bottom: 10px;
   left: 150px;
-  background-color: #a8dadb;
+  background-color: #dee7ef;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -504,141 +489,284 @@ select {
   width: 100%;
   padding: 10px 0;
   font-size: 18px;
-  color: #fff;
+  color: #1d3557;
   margin-bottom: 10px;
   background: transparent;
 }
 
-
-/* ----------------------------------------------   css for  EDIT STUDENT                  --------------------------------- */ 
-
-form {
-  width: 40%;
-  margin: auto;
+.EditButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 }
 
-label {
-  display: inline-block;
-  width: 30%;
-  text-align: right;
-  margin-right: 5%;
-  margin-bottom: 10px;
+/* ------------------------------ common css for tables pages  --------------------------------- */ 
 
+.tableName{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 25px 3px;
+  color: #295387;
 }
 
-input{
-  display: inline-block;
-  width: 60%;
-  margin-bottom: 10px;
-
+.table{
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border:  1px solid #c3d5e8;
+  font-size: 0.9em;
+  min-width: 400px;
+  width: 50%;
 }
 
-#button {
+.table thead tr{
+  background-color: #295387;
+  color: #ffffff;
   text-align: left;
-  width: auto;
-  margin-right: 0;
-}
-
-
-.button {
-  text-align:center;
-  margin-top: 20px;
-}
-
-
-.save {
-  text-align:center;
-  display: inline-block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-  background-color: #a8dadb;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
   font-weight: bold;
 }
 
+.table th,
+.table td{
+  padding: 15px 15px;
+}
 
-#delete {
-  text-align:center;
-  display: inline-block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-  background-color: #e53945;
-  color: #fff;
+.table th{
+  text-align: left;
+}
+
+.table tbody tr{
+  border-bottom: 1px solid #d3e4f5;
+}
+
+.table tbody tr:nth-of-type(even){
+  background-color: #c3d5e8;
+}
+
+.switch { 
+  position: relative; 
+  display: inline-block; 
+  width: 32px; 
+  height: 17px; 
+} 
+ 
+.switch input { 
+  opacity: 0; 
+  width: 0; 
+  height: 0; 
+} 
+
+
+.slider { 
+  position: absolute; 
+  cursor: pointer; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-color: #9fb0c0; 
+  -webkit-transition: .4s; 
+  transition: .4s; 
+} 
+
+.slider:before { 
+  position: absolute; 
+  content: ""; 
+  margin: 0; 
+  padding: 0; 
+  height: 15px; 
+  width: 15px; 
+  left: 1px; 
+  bottom: 1px; 
+  background-color: white; 
+  -webkit-transition: .4s; 
+  transition: .4s; 
+} 
+
+input:checked + .slider { 
+  background-color: #067606be; 
+} 
+
+input:focus + .slider { 
+  box-shadow: 0 0 1px #067606be; 
+} 
+
+input:checked + .slider:before { 
+  -webkit-transform: translateX(15px); 
+  -ms-transform: translateX(15px); 
+  transform: translateX(15px); 
+} 
+
+.slider.round { 
+  border-radius: 34px; 
+} 
+
+.slider.round:before { 
+  border-radius: 50%; 
+}
+.Edit-S{
+  background-color: #295387;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
+  text-align: center;
+  transition: 0.4s;
+  padding: 8px 25px;
+  border-radius:12px;
+  width: 35%;
+  float: left;
 }
 
+.Edit-S:hover {
+  background-color: #067606be;
+  color: white;  
+}
 
-/* ------------------------  slider button of active student -------------------- */ 
-.switch {
-  position: relative;
+.Delet-S{
+  background-color: #295387;
+  border: none;
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+  padding: 8px 25px;
+  border-radius:12px;
+  width: 35%;
+  float: right;
+}
+
+.Delet-S:hover {
+  background-color: rgba(167, 0, 0, 0.963);
+  color: white;
+}
+
+.edit_img_S{
+  color:white;
+  width: 14px;
+  height: 14px
+}
+
+.dropDep{
+  width: 100%;
+  padding: 7px 20px;
+  margin: 8px 0;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: #dee7ef;
 }
 
-/* to Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.dropTable.center{
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.depTableName{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 25px 3px;
+  color: #295387;
 }
 
-/* The slider */
-.slider {
+.searchBox {
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  button: 50%;
+  left: 20px;
+  top: 40px;
+  transform:  translate(45px,45px);
+  background: #c3d5e8;
+  height: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  margin: auto;
+  display:flex;
+  flex-direction: row-reverse;
+  margin-top:10px;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #457b9d;
-  -webkit-transition: .4s;
-  transition: .4s;
+.searchBox:hover > .searchInput {
+  width: 240px;
+  padding: 0 6px;
 }
 
-input:checked + .slider {
-  background-color: #a8dadb;
+.searchBox:hover > .searchButton {
+background: white;
+color : #2f3640;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #a8dadb;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
+.searchButton {
+  color: white;
+  float: right;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transition: 0.4s;
+
 }
 
+.searchInput {
+  border:none;
+  background: none;
+  outline:none;
+  float:right;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  outline: none;
+  -moz-appearance: textfield;
+}
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-/* --------------------------------------------         ------------------------------ */ 
+.searchInput placeholder{
+  color: white;
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 150px;
+  padding: 0 6px;
+}
+}
+
+.saveDep:hover{
+  background-color: #a8dadb;
+}
+
+.saveDep{
+  background-color: #295387;
+  border: none;
+  color: #a8dadb;
+  text-align: center;
+  transition: 0.4s;
+  padding: 12px 12px;
+  border-radius:12px;
+  width: 80px;
+  margin: 10px 10px;
+  position: right;
+  margin-left: 70%;
+  margin-top: 25px;
+}
+
+.saveDep:hover {
+  background-color: #94c0e7;
+  color: #295387;
+}
+
+.clr{
+  clear:both;
+}
