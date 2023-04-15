@@ -96,7 +96,7 @@ nav a:hover::before {
 }
 
 /* --------------------------------- css for websitepage ---------------------------- */   
-  .mainbody {
+.mainbody {
     /*background-image: url(../imgs/background.jpg);*/
     background-repeat: no-repeat;
     background-attachment: fixed;
