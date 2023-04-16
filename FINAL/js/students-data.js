@@ -43,7 +43,6 @@ function addStudentToLocalStorage() {
     gender: document.getElementById("studentGender").value,
     level: document.getElementById("studentLevel").value,
     status: document.getElementById("studentStatus").value,
-    department: document.getElementById("studentDep").value,
     email: document.getElementById("studentEmail").value,
     phone: document.getElementById("studentPhone").value,
   };
