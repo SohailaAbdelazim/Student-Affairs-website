@@ -11,70 +11,74 @@
     />
     <link rel="stylesheet" href="../css/stylesheet2.css" />
   </head>
-  <header>
-    <div class="logo">
-      <img src="../photos/Logo.jpg" alt="FCAI-CU" />
-    </div>
-    <div class="container">
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href="homepage.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
-          </li>
-          <li>
-            <a href="add-new-student.html"
-              ><i class="fa fa-user-plus"></i> Add New student</a
-            >
-          </li>
-          <li>
-            <a href="students-data.html"
-              ><i class="fa fa-folder"></i> Students Data</a
-            >
-          </li>
-          <li>
-            <a href="assign-department.html"
-              ><i class="fa fa-edit"></i> Assign Department
-            </a>
-          </li>
-          <li>
-            <a href="./active-inactive-students.html"
-              ><i class="fa fa-toggle-on"></i> Active/inactive Students</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
   <body>
-    <div class="insert-box" style="height: 820px;" >
+    <header>
+      <div class="logo">
+        <img src="../photos/Logo.jpg" alt="FCAI-CU" />
+      </div>
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="homepage.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
+            </li>
+            <li>
+              <a href="add-new-student.html"
+                ><i class="fa fa-user-plus"></i> Add New student</a
+              >
+            </li>
+            <li>
+              <a href="students-data.html"
+                ><i class="fa fa-folder"></i> Students Data</a
+              >
+            </li>
+            <li>
+              <a href="assign-department.html"
+                ><i class="fa fa-edit"></i> Assign Department
+              </a>
+            </li>
+            <li>
+              <a href="active/inactive-students.html"
+                ><i class="fa fa-toggle-on"></i> Active/inactive Students</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="insert-box" style="height: 880px;" >
       <h2>Add New Student</h2>
-      <form method="POST" action="" enctype="multipart/form-data">
+      <form method="GET" action="">
         <div class="user-box">
-          <input type="text" required value="" />
-          <label>Name</label>
+          <input type="text" id="studentId" required value="" />
+          <label for="studentId">ID</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="studentName" required value="" />
+          <label for="studentName">Name</label>
         </div>
         <br />
         <div class="user-box">
-          <input type="date" required value="" />
-          <label>Date of Birth</label>
+          <input type="date" id="studentDate" required value="" />
+          <label for="studentDate">Date of Birth</label>
         </div>
         <br />
         <div class="user-box">
-          <input type="number" required value="" max="4" />
-          <label>GPA</label>
+          <input type="number" id="studentGpa" required value="" max="4" />
+          <label for="studentGpa">GPA</label>
         </div>
         <br />
         <div class="user-boxx">
           <label>Gender: </label>
-          <input id="FR" type="radio" name="ma" value="M" />
-          <label for="FR">Male</label>
-          <input id="BE" type="radio" name="ma" value="F" />
-          <label for="BE">Female</label>
+          <select style="position: relative; left: 73px; top: 5px;"  id="studentGender" name="gender">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
         </div>
         <br />
         <div class="user-box">
-          <label>Level: </label>
-          <select name="level">
+          <label for="studentLevel">Level: </label>
+          <select id="studentLevel" name="level">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -84,14 +88,14 @@
         <br />
         <div class="user-boxx">
           <label>Status: </label>
-          <input id="FR" type="radio" name="BE" value="active" />
-          <label for="FR">Active</label>
-          <input id="BE" type="radio" name="BE" value="inactive" />
-          <label for="BE">Inactive</label>
+          <select style="position: relative; left: 81px; top: 5px; width: 90px;" id="studentStatus" name="status">
+            <option value="1">Active</option>
+            <option value="2">Inactive</option>
+          </select>
         </div>
         <br />
         <div class="user-box">
-          <select style="width: 90px;"  name="level">
+          <select id="studentDep" style="width: 90px;"  name="department">
             <option value="c">General</option>
             <option value="c">CS</option>
             <option value="s">IS</option>
@@ -99,21 +103,22 @@
             <option value="i">IT</option>
             <option value="d">DS</option>
           </select>
-          <label>Department: </label>
+          <label for="studentDep">Department: </label>
         </div>
         <br />
         <div class="user-box">
-          <input type="email" required value="" />
-          <label>Email</label>
+          <input type="email" id="studentEmail" required value="" />
+          <label for="studentEmail">Email</label>
         </div>
         <br />
         <div class="user-box">
-          <input type="phone" required value="" />
-          <label>Phone Number</label>
+          <input type="phone" id="studentPhone" required value="" />
+          <label for="studentPhone">Phone Number</label>
         </div>
-        <button name="submit">Submit</button>
-        <button name="reset" value="Reset">Reset</button>
+        <button type="submit" onclick="addStudentToLocalStorage()">Submit</button>
+        <button type="Reset">Reset</button>
       </form>
     </div>
   </body>
+  <script src="../js/students-data.js"></script>
 </html>
