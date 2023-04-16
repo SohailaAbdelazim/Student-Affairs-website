@@ -392,15 +392,15 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  background: #cedded;
+  box-shadow: 0 15px 15px #457b9d;
   border-radius: 10px;
 }
 
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: #457b9d;
   text-align: center;
 }
 
@@ -412,10 +412,10 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #1d3557;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #1d3557;
   outline: none;
   background: transparent;
 }
@@ -424,8 +424,8 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #ddd;
-  color: #1d3557;
+  color: #fff;
+  background-color: #1d3557;
   border-radius: 30px;
   font-size: 16px;
   -webkit-text-decoration: none;
@@ -439,7 +439,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 form button:hover {
-  background-color: #1d3557;
+  background-color: #457b9d;
   color: #ddd;
   cursor: pointer;
 }
