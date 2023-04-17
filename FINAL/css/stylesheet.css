@@ -251,23 +251,22 @@ input:checked + .slider:before {
   height: 25px;
   border-radius: 25px;
   padding: 10px;
-  margin: auto;
   display:flex;
   flex-direction: row-reverse;
   margin-top:10px;
 }
 
-.searchBox:hover > .searchInput {
+.searchBox:hover > #searchInput {
   width: 240px;
   padding: 0 6px;
 }
 
-.searchBox:hover > .searchButton {
+.searchBox:hover > #searchButton {
 background: white;
 color : #2f3640;
 }
 
-.searchButton {
+#searchButton {
   color: white;
   float: right;
   width: 25px;
@@ -281,13 +280,13 @@ color : #2f3640;
 
 }
 
-.searchInput {
+#searchInput {
   border:none;
   background: none;
   outline:none;
   float:right;
   padding: 10px;
-  color: white;
+  color: #295387;
   font-size: 16px;
   transition: 0.4s;
   line-height: 40px;
@@ -302,7 +301,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.searchInput placeholder{
+#searchInput placeholder{
   color: white;
 }
 
@@ -320,14 +319,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .saveDep{
   background-color: #295387;
   border: none;
-  color: #a8dadb;
+  color: #ffffff;
   text-align: center;
   transition: 0.4s;
   padding: 12px 12px;
   border-radius:12px;
   width: 80px;
   margin: 10px 10px;
-  position: right;
+  position: relative;
   margin-left: 70%;
   margin-top: 25px;
 }
