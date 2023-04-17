@@ -32,35 +32,35 @@
         <h2> Edit Existing Student Data </h2>
         <form method="POST" action="" enctype="multipart/form-data">
             <div class="user-box">
-                <input type="text" id="name" required value="" >
+                <input type="text" id="studentName" required value="" >
                 <label>Student Name</label>
             </div>
             <br/>
 
             <div class="user-box">
-                <input type="date" id="birthdate" required value="" >
+                <input type="date" id="studentDate" required value="" >
                 <label>Date of Birth</label>
             </div>
             <br/> 
 
             <div class="user-box">
-                <input type="number" id="GPA" required value="" max = "4">
+                <input type="number" id="studentGpa" required value="" max = "4">
                 <label >GPA</label>
             </div>
             <br/>
 
             <div class="user-boxx">
                 <label>Gender: </label>
-                <input id="FR" type="radio" name="ma" value="M" />
-                <label for="FR">Male</label>
-                <input id="BE" type="radio" name="ma" value="F" />
-                <label for="BE">Female</label>
+                <input id="studentGender" type="radio" name="ma" value="M" />
+                <label for="studentGender">Male</label>
+                <input id="studentGender" type="radio" name="ma" value="F" />
+                <label for="studentGender">Female</label>
             </div>
             <br/> 
 
             <div class="user-box">
-                <label for="Level">Level:</label>
-                <select name = "level" >
+                <label for="studentLevel">Level:</label>
+                <select id ="studentLevel" name = "level" >
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -80,19 +80,19 @@
 
             <div class="user-box">
                 <input type="text" id="dep" readonly>
-                <label for="dep">Departement</label>
+                <label id = "studentdp" for="dep">Departement</label>
             </div>
             <br/> 
 
             <div class="user-box">
                 <input type="email" id="email" required value="">
-                <label for="email">Email</label>
+                <label id = "studentEmail" for="email">Email</label>
             </div>
             <br/> 
 
             <div class="user-box">
                 <input type="tel" id="tel" required value="" >
-                <label for="tel">Mobile Number</label>
+                <label id = "studentPhone"for="tel">Mobile Number</label>
             </div>
 
             <div class = "EditButton">
@@ -105,6 +105,7 @@
         </form>
     </div>
 </body>
+<script src="../js/students-data.js"></script>
 </html>
 
 
