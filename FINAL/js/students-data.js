@@ -49,3 +49,14 @@ function addStudentToLocalStorage() {
   studentArray.push(student);
   localStorage.setItem("students", JSON.stringify(studentArray));
 }
+
+
+
+/* edit page */
+function deleteconfirmation() {
+  confirm("Are you sure you want to delete the student record? ");} 
+
+  
+function editstudent(){
+  document.getElementById("").value= student.name; 
+}
