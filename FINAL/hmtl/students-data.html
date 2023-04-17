@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="clr"></div>
     </head>
-    <body onload="reload()">
+    <body id="body">
       <header> 
         <div class="logo">
           <img src="../photos/Logo.jpg" alt="Logo">
@@ -28,169 +28,20 @@
         <table class="table" style="width:99%" id="myTable">
           <thead>
             <tr>
-              <th id="Student_Name">Student Name</th>
               <th id="ID">ID</th>
+              <th id="Student_Name">Student Name</th>
               <th id="GPA">GPA</th>
               <th id="Level">Level </th>
-              <th id="Departement">Departement</th>
+              <!-- <th id="Departement">Departement</th> -->
+              <th id="Gender">Gedner</th>
               <th id="Phone">Phone</th>
-              <th id="Birth_Day">Birth Day</th>
               <th id="Status">Status</th>
+              <th id="Birth_Day">Birth Day</th>
               <th id="Email">E-Mail</th>
               <th ></th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20250023</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20253365</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20257789</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20253675</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20250004</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20259788</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20239879</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20258888</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20254478</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
-            <tr>
-              <td>Ahmed Mahmoud</td>
-              <td>20255265</td>
-              <td>3.8</td>
-              <td> 3</td>
-              <td>AI</td>
-              <td>01956325496</td>
-              <td>25/10/2158</td>
-              <td>active</td>
-              <td>ahmed.ahemd.ahemd@gamil.com</td>
-                <td>
-                  <a class="centerLink" href="Editpage.html"><button class="Edit-S"><img class="edit_img_S" src="../photos/edit.png"></button></a>
-                  <a class="centerLink"><button class="Delet-S" onclick="deleteFunction()"><i class="fa fa-fw fa-trash"></i></button></a>
-                </td>
-            </tr>
+          <tbody id="Body">
           </tbody>
           </table>
         </div>
