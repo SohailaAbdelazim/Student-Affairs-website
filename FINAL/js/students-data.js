@@ -1,32 +1,37 @@
 // function to delete frist row
 function deleteFunction(){
-document.getElementById("myTable").deleteRow(1);
-}
-
-// local stroage of student data table
-let studentsData =  [];
-
-function reload(){
-  let Info = {
-    Student_Name : document.getElementById("Student_Name").value,
-    ID : document.getElementById("ID").value,
-    GPA : document.getElementById("GPA").value,
-    Level : document.getElementById("Level").value,
-    Departement : document.getElementById("Departement").value,
-    Phone : document.getElementById("Phone").value,
-    Birth_Day : document.getElementById("Birth_Day").value,
-    Status : document.getElementById("Status").value,
-    Address : document.getElementById("Email").value
+  document.getElementById("myTable").deleteRow(1);
   }
-  studentsData.push(Info);
-  localStorage.setItem("info", JSON.stringify(studentsData));
-}
-document.onclick = function(){reload()};
 
+  
 // function deleteFunction(r) {
 //     var i = r.parentNode.parentNode.rowIndex;
 //     document.getElementById("myTable").deleteRow(i);
 // }
+
+onload = function(){
+  let table = ""; 
+  studentArray.forEach(function(student) { 
+    table += "<tr>";
+    table += "<td>" + student.id + "</td>"; 
+    table += "<td>" + student.name + "</td>"; 
+    table += "<td>" + student.gpa + "</td>"; 
+    table += "<td>" + student.level + "</td>"; 
+    table += "<td>" + student.gender + "</td>"; 
+    table += "<td>" + student.phone + "</td>"; 
+    table += "<td>" + student.status + "</td>"; 
+    table += "<td>" + student.date + "</td>"; 
+    table += "<td>" + student.email + "</td>"; 
+    table += "<td>" + "<a class='centerLink' href='Editpage.html'><button class='Edit-S'><img class='edit_img_S' src='../photos/edit.png'></button></a> " + 
+    "<a class='centerLink'><button class='Delet-S' onclick='deleteFunction()'><i class='fa fa-fw fa-trash'></i></button></a>" + "</td>"; 
+    table += "</tr>";
+  }); 
+  
+  document.getElementById("Body").innerHTML = table;
+  }
+
+// local stroage of student data table
+
 
 /*
     scripts for navigation bar
@@ -54,6 +59,7 @@ window.onclick = function(event) {
 let studentArray = localStorage.getItem("students")
   ? JSON.parse(localStorage.getItem("students"))
   : [];
+
 function addStudentToLocalStorage() {
   student = {
     id: document.getElementById("studentId").value,
@@ -71,12 +77,19 @@ function addStudentToLocalStorage() {
 }
 
 
-
 /* edit page */
 function deleteconfirmation() {
-  confirm("Are you sure you want to delete the student record? ");} 
+  var result = confirm("Are you sure you want to delete the student record? ");
+  if(result==true){ /* as it return true if the user clicks “OK”, and false otherwise. */ 
+    localStorage.removeItem(studentArray);
 
-  
+  }
+  else{
+    console.log("not confirmed!")
+  }
+} 
+
+
 function editstudent(){
   document.getElementById("").value= student.name; 
 }
