@@ -1,6 +1,27 @@
+// function to delete frist row
 function deleteFunction(){
 document.getElementById("myTable").deleteRow(1);
 }
+
+// local stroage of student data table
+let studentsData =  [];
+
+function reload(){
+  let Info = {
+    Student_Name : document.getElementById("Student_Name").value,
+    ID : document.getElementById("ID").value,
+    GPA : document.getElementById("GPA").value,
+    Level : document.getElementById("Level").value,
+    Departement : document.getElementById("Departement").value,
+    Phone : document.getElementById("Phone").value,
+    Birth_Day : document.getElementById("Birth_Day").value,
+    Status : document.getElementById("Status").value,
+    Address : document.getElementById("Email").value
+  }
+  studentsData.push(Info);
+  localStorage.setItem("info", JSON.stringify(studentsData));
+}
+document.onclick = function(){reload()};
 
 // function deleteFunction(r) {
 //     var i = r.parentNode.parentNode.rowIndex;
@@ -10,7 +31,6 @@ document.getElementById("myTable").deleteRow(1);
 /*
     scripts for navigation bar
 */
-
 function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
