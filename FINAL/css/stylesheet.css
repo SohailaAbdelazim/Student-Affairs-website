@@ -382,10 +382,15 @@ input[type="number"]::-webkit-inner-spin-button {
   display: block;
 }
 
-.welcome {
+/*.welcome {
   padding: 50px;
   padding-left: 20%;
   font-size: 40px;
+}*/ 
+.welcome-div{
+  text-align: center;
+  position: relative;
+  color: #295387;
 }
 
 /* ------------------------------- css for the login page -------------------------------------- */
@@ -448,3 +453,4 @@ form button:hover {
   color: #ddd;
   cursor: pointer;
 }
+
