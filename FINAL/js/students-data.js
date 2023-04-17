@@ -54,9 +54,17 @@ function addStudentToLocalStorage() {
 
 /* edit page */
 function deleteconfirmation() {
-  confirm("Are you sure you want to delete the student record? ");} 
+  var result = confirm("Are you sure you want to delete the student record? ");
+  if(result==true){ /* as it return true if the user clicks “OK”, and false otherwise. */ 
+    localStorage.removeItem(studentArray);
 
-  
+  }
+  else{
+    console.log("not confirmed!")
+  }
+} 
+
+
 function editstudent(){
   document.getElementById("").value= student.name; 
 }
