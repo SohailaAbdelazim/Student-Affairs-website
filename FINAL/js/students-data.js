@@ -1,16 +1,41 @@
+// function to delete frist row
 function deleteFunction(){
-document.getElementById("myTable").deleteRow(1);
-}
+  document.getElementById("myTable").deleteRow(1);
+  }
 
+  
 // function deleteFunction(r) {
 //     var i = r.parentNode.parentNode.rowIndex;
 //     document.getElementById("myTable").deleteRow(i);
 // }
 
+onload = function(){
+  let table = ""; 
+  studentArray.forEach(function(student) { 
+    table += "<tr>";
+    table += "<td>" + student.id + "</td>"; 
+    table += "<td>" + student.name + "</td>"; 
+    table += "<td>" + student.gpa + "</td>"; 
+    table += "<td>" + student.level + "</td>"; 
+    table += "<td>" + student.gender + "</td>"; 
+    table += "<td>" + student.phone + "</td>"; 
+    table += "<td>" + student.status + "</td>"; 
+    table += "<td>" + student.date + "</td>"; 
+    table += "<td>" + student.email + "</td>"; 
+    table += "<td>" + "<a class='centerLink' href='Editpage.html'><button class='Edit-S'><img class='edit_img_S' src='../photos/edit.png'></button></a> " + 
+    "<a class='centerLink'><button class='Delet-S' onclick='deleteFunction()'><i class='fa fa-fw fa-trash'></i></button></a>" + "</td>"; 
+    table += "</tr>";
+  }); 
+  
+  document.getElementById("Body").innerHTML = table;
+  }
+
+// local stroage of student data table
+
+
 /*
     scripts for navigation bar
 */
-
 function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -34,6 +59,7 @@ window.onclick = function(event) {
 let studentArray = localStorage.getItem("students")
   ? JSON.parse(localStorage.getItem("students"))
   : [];
+
 function addStudentToLocalStorage() {
   student = {
     id: document.getElementById("studentId").value,
@@ -51,7 +77,6 @@ function addStudentToLocalStorage() {
 }
 
 
-
 /* edit page */
 function deleteconfirmation() {
   var result = confirm("Are you sure you want to delete the student record? ");
@@ -67,6 +92,7 @@ function deleteconfirmation() {
 
 /*function editstudent(){
   document.getElementById("").value= student.name; 
+<<<<<<< HEAD
 }*/ 
 
 function editdata(id) {
@@ -150,3 +176,6 @@ saveBtn.addEventListener('click', function(e) {
   // redirect to the students data page
   window.location.href = 'students-data.html';
 });
+=======
+}
+>>>>>>> 73b249010e7d8d6eb3aa8aa33aa0c92ee9e3a266
