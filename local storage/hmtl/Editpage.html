@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel= "stylesheet" href = "../css/stylesheet2.css"/>
+    <title> Edit Student Data</title>
+</head>
+
+<body>
+    <header> 
+        <div class="logo">
+            <img src="../photos/Logo.jpg" alt="Logo">
+        </div>
+
+        <div class = "container"> 
+            <nav class = "navbar">
+                <ul> 
+                    <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Homepage</a> </li>
+                    <li> <a href="add-new-student.html"><i class="fa fa-user-plus"></i> Add New student</a> </li>   
+                    <li> <a href="students-data.html"><i class="fa fa-folder"></i> Students Data</a> </li>
+                    <li> <a href="assign-department.html"><i class="fa fa-edit"></i> Assign Department </a> </li>  
+                    <li> <a href="active-inactive-students.html"><i class="	fa fa-toggle-on"></i> Active/inactive Students</a> </li> 
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    
+    <div class = "insert-box">
+        <h2> Edit Existing Student Data </h2>
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="user-box">
+                <input type="text" id="studentName"  >
+                <label for="studentName">Student Name</label>
+            </div>
+            <br/>
+
+            <div class="user-box">
+                <input type="date" id="studentDate" >
+                <label>Date of Birth</label>
+            </div>
+            <br/> 
+
+            <div class="user-box">
+                <input type="number" id="studentGpa" max = "4" min="0">
+                <label >GPA</label>
+            </div>
+            <br/>
+
+            <div id="studentGender" class="user-boxx">
+                <label>Gender: </label>
+                <input id="male" type="radio" name="gender" value="M" />
+                <label for="male">Male</label>
+                <input id="female" type="radio" name="gender" value="F" />
+                <label for="female">Female</label>
+            </div>
+            <br/>
+
+            <div class="user-box">
+                <label for="studentLevel">Level:</label>
+                <select id="studentLevel" name = "studentLevel" >
+                    <option id="1" value="1">1</option>
+                    <option id="2" value="2">2</option>
+                    <option id="3" value="3">3</option>
+                    <option id="4" value="4">4</option>
+                </select>
+            </div>
+            <br/>
+
+            <div id="studentStatus" class="user-boxx">
+                <label>Status: </label>
+                <input id="active" type="radio" name="status" value="active" />
+                <label for="active">Active</label>
+                <input id="inactive" type="radio" name="status" value="inactive" />
+                <label for="inactive">Inactive</label>
+            </div>
+            <br/>
+
+            <div class="user-box">
+                <input type="text" id="departement" readonly>
+                <label for="departement">Departement</label>
+            </div>
+            <br/> 
+
+            <div class="user-box">
+                <input type="email" id="studentEmail" >
+                <label for="studentEmail">Email</label>
+            </div>
+            <br/> 
+
+            <div class="user-box">
+                <input type="number" id="studentPhone" >
+                <label for="studentId">Mobile Number</label>
+            </div>
+
+            <div class = "EditButton">
+                <button type="button" id="save" class = "save "> Save </button>
+                <button type="button" id="delete" class = "delete" onclick="myFunction()"> Delete </button>
+            </div>
+        </form>
+    </div>
+    <script src="../js/EditPage.js"></script>
+</body>
+
+</html>
+
+

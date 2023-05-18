@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Student</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/stylesheet2.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../photos/Logo.jpg" alt="FCAI-CU" />
+      </div>
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="homepage.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
+            </li>
+            <li>
+              <a href="add-new-student.html"
+                ><i class="fa fa-user-plus"></i> Add New student</a
+              >
+            </li>
+            <li>
+              <a href="students-data.html"
+                ><i class="fa fa-folder"></i> Students Data</a
+              >
+            </li>
+            <li>
+              <a href="assign-department.html"
+                ><i class="fa fa-edit"></i> Assign Department
+              </a>
+            </li>
+            <li>
+              <a href="active-inactive-students.html"
+                ><i class="fa fa-toggle-on"></i> Active/inactive Students</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="insert-box" style="height: 870px;" >
+      <h2>Add New Student</h2>
+      <form method="GET" action="">
+        <div class="user-box">
+          <input type="text" id="studentId" required value="" />
+          <label for="studentId">ID</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="studentName" required value="" />
+          <label for="studentName">Name</label>
+        </div>
+        <br />
+        <div class="user-box">
+          <input type="date" id="studentDate" required value="" />
+          <label for="studentDate">Date of Birth</label>
+        </div>
+        <br />
+        <div class="user-box">
+          <input type="number"  id="studentGpa" required value="" max="4" />
+          <label for="studentGpa">GPA</label>
+        </div>
+        <br />
+        <div class="user-boxx">
+          <label>Gender: </label>
+          <select style="position: relative; left: 73px; top: 5px;"  id="studentGender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <br />
+        <div class="user-box">
+          <label for="studentLevel">Level: </label>
+          <select id="studentLevel" name="level">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <br />
+        <div class="user-boxx">
+          <label>Status: </label>
+          <select style="position: relative; left: 81px; top: 5px; width: 90px;" id="studentStatus" name="status">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+        <br />
+        <div class="user-box">
+          <input type="email" id="studentEmail" required value="" />
+          <label for="studentEmail">Email</label>
+        </div>
+        <br />
+        <div class="user-box">
+          <input type="phone" id="studentPhone" required value="" />
+          <label for="studentPhone">Phone Number</label>
+        </div>
+        <button type="submit" onclick="addStudentToLocalStorage()">Submit</button>
+        <button type="Reset">Reset</button>
+      </form>
+    </div>
+  </body>
+  <script src="../js/addNewStu.js"></script>
+</html>
