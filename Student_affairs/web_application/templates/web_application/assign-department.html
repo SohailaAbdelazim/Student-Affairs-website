@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Student Affairs | Assign Department</title>
-    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -11,7 +12,7 @@
 
     <header>
         <div class="logo">
-            <img src="../photos/Logo.jpg" alt="Logo">
+            <img src="{% static 'photos/Logo.jpg' %}" alt="Logo">
         </div>
         <div class = "container">
             <nav class = "navbar">
@@ -31,7 +32,7 @@
 
         <input   id="searchInput"type="number"  placeholder="ID..." >
         <button  id="searchButton" href="#">
-            <i class="material-icons"><img src="../photos/searchIcon.png" style="width: 15px;height: 15px; padding-top: 4px;">
+            <i class="material-icons"><img src="{% static 'photos/searchIcon.png' %}" style="width: 15px;height: 15px; padding-top: 4px;">
             </i>
         </button>
     </div>

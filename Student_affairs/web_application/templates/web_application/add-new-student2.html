@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,12 +10,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../css/stylesheet2.css" />
+    <link rel="stylesheet" href="{% static 'css/stylesheet2.css' %}" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="../photos/Logo.jpg" alt="FCAI-CU" />
+        <img src="{% static 'photos/Logo.jpg' %}" alt="FCAI-CU" />
       </div>
       <div class="container">
         <nav class="navbar">
@@ -64,7 +65,7 @@
         </div>
         <br />
         <div class="user-box">
-          <input type="number" id="studentGpa" required value="" max="4" />
+          <input type="number"  id="studentGpa" required value="" max="4" />
           <label for="studentGpa">GPA</label>
         </div>
         <br />
@@ -108,5 +109,5 @@
       </form>
     </div>
   </body>
-  <script src="../js/students-data.js"></script>
+  <script src="../js/addNewStu.js"></script>
 </html>

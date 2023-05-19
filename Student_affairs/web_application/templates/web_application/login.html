@@ -1,10 +1,11 @@
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../css/stylesheet.css" />
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" />
     <script
     src="https://kit.fontawesome.com/1457508b99.js"
     crossorigin="anonymous"
@@ -13,7 +14,7 @@
 <body class="login-body">
     <header>
     <div class="logo">
-        <img src="../photos/logo.jpg" alt="Logo" />
+        <img src="{% static 'photos/Logo.jpg' %}" alt="Logo" />
     </div>
     <div class="container">
         <nav class="navbar"></nav>
@@ -21,7 +22,7 @@
     </header>
     <div class="login-box">
     <h2>Admin</h2>
-    <form action="../hmtl/homepage.html" method="POST">
+    <form action="homepage.html" method="POST">
         <div class="user-box">
             <label>Email</label>
             <input type="text" name="email" required />

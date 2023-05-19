@@ -1,15 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
     <head>
       <meta charset="UTF-8"/>
-      <link rel="stylesheet" href="../css/stylesheet.css">
-      <script src="../js/students-data.js"></script>
+      <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+      <script src="{% static 'js/students-data.js' %}"></script>
+      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="clr"></div>
     </head>
     <body id="body">
       <header> 
         <div class="logo">
-          <img src="../photos/Logo.jpg" alt="Logo">
+          <img src="{% static 'photos/Logo.jpg' %}" alt="Logo">
       </div>
         <div class = "container"> 
           <nav class = "navbar">
@@ -51,11 +53,12 @@
                 <td>{{student.gender}}</td>
                 <td>{{student.phone}}</td>
                 <td>{{student.status}}</td>
-                <td>{{student.date}}</td>
+                <td>{{student.birth_day}}</td>
                 <td>{{student.email}}</td>
                 <td>{{student.departement}}</td>
                 <td>
-                  <a class='centerLink' href='Editpage.html?id=" + student.id + "'><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src='../photos/edit.png'></button></a> <a class='centerLink'><button class='Delet-S' onclick='deleteFunction()'><i class='fa fa-fw fa-trash'></i></button></a>
+                  
+                  <a class='centerLink' href='Editpage.html?id=" + student.id + "'><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a> <a class='centerLink'><button class='Delet-S' onclick='deleteFunction()'><i class='fa fa-fw fa-trash'></i></button></a>
                 </td>
               </tr>
             {% endfor %}
