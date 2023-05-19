@@ -10,4 +10,6 @@ urlpatterns = [
     path('Editpage.html', views.Editpage, name="Editpage"),
     path('assign-department.html', views.assignDepartment, name="assignDepartment"),
     path('active-inactive-students.html', views.active_inactive_students, name="active-inactive-students"),
+    path('save_option/', views.save_option, name='save_option'),
+
 ]

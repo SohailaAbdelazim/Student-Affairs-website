@@ -1,65 +1,73 @@
-onload= function () {
-    function searchForStudent() {
-        let searchId = document.getElementById("searchInput").value;
-        let studentArray = localStorage.getItem("students")
-            ? JSON.parse(localStorage.getItem("students"))
-            : [];
+// search = function () {
+//     let searchId = document.getElementById("searchInput").value;
+//     if (searchId) {
+//         let form = document.createElement("form");
+//         form.method = "post";
+//         form.action = "";
+//         let csrf_token = document.createElement("input");
+//         csrf_token.type = "hidden";
+//         csrf_token.name = "csrfmiddlewaretoken";
+//         csrfToken.value = '{{ csrf_token }}';
 
+//         var idInputField = document.createElement('input');
+//         idInputField.type = 'hidden';
+//         idInputField.name = 'id_input';
+//         idInputField.value = idInput;
+
+//         form.appendChild(csrfToken);
+//         form.appendChild(idInputField);
+
+//         document.body.appendChild(form);
+//         form.submit();
+//     }
+// }
+// document.getElementById('search_button').addEventListener('click', search);
+
+
+function drop_down() {
         let table = '';
+        //create dropdown list for department
+        table += "<td>" + "<select id='dropDep' class='dropDep'>" +
+            "<option value='IT'>Information Technology (IT)</option>" +
+            "<option value='CS'>Computer Science (CS)</option>" +
+            "<option value='IS'>Information System (IS)</option>" +
+            "<option value='SE'>Artificial Intelligence (AI)</option>" +
+            "<option value='DS'>Decision Support (DS)</option>" +
+            "</select>" + "</td>";
+        document.getElementById('drop_down').innerHTML = table;
+}
 
-        for (let i = 0; i < studentArray.length; i++) {
-            if (studentArray[i].id === searchId) {
-                console.log(searchId);
-                if (studentArray[i].level < 3) {
-                    studentArray[i].department = "General";
-                    table += "<tr>";
-                    table += "<td>" + studentArray[i].id + "</td>";
-                    table += "<td>" + studentArray[i].name + "</td>";
-                    table += "<td>" + studentArray[i].gpa + "</td>";
-                    table += "<td>" + studentArray[i].level + "</td>";
-                    table += "<td>" + studentArray[i].department + "</td>";
-                    table += "</tr>";
-                    console.log(searchId);
-                } else {
-                    table += "<tr>";
-                    table += "<td>" + studentArray[i].id + "</td>";
-                    table += "<td>" + studentArray[i].name + "</td>";
-                    table += "<td>" + studentArray[i].gpa + "</td>";
-                    table += "<td>" + studentArray[i].level + "</td>";
-                    //create dropdown list for department
-                    table += "<td>" + "<select id='dropDep' class='dropDep'>" +
-                        "<option value='General'>General</option>" +
-                        "<option value='IT'>Information Technology (IT)</option>" +
-                        "<option value='CS'>Computer Science (CS)</option>" +
-                        "<option value='IS'>Information System (IS)</option>" +
-                        "<option value='SE'>Artificial Intelligence (AI)</option>" +
-                        "<option value='DS'>Decision Support (DS)</option>" +
-                        "</select>" + "</td>";
-                    table += "</tr>";
-                }
+function saveOption() {
+    var selectedOption = document.getElementById('dropDep').value;
+    var selectedOption2 = document.getElementById('sid').value;
+    // Send the selected option to Django for saving
 
-            }
-        }
-        document.getElementById('tbody').innerHTML = table;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/assign-department.html', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function() {
+    if (xhr.status === 200) {
+        console.log('Option saved successfully.');
+    } else {
+        console.log('Error saving option.');
     }
+    };
+    xhr.send('selected_option=' + encodeURIComponent(selectedOption));
+    xhr.send('selected_option=' + encodeURIComponent(selectedOption2));
+}
 
     // function to get the selected department and store it in the studentArray when click on the saveDep button
     
-    function saveDep() {
-        let studentArray = localStorage.getItem("students")
-        ? JSON.parse(localStorage.getItem("students"))
-        : [];
-        let searchId = document.getElementById("searchInput").value;
-        
-        for (let i = 0; i < studentArray.length; i++) {
-        if (studentArray[i].id === searchId) {
-            studentArray[i].department = document.getElementById("dropDep").value;
-            localStorage.setItem("students", JSON.stringify(studentArray));
-            }
-
-    }
-    }
-    // document.getElementById('saveDep').addEventListener('click', saveDep);
-    document.onclick = function() {saveDep()};
-    document.getElementById("searchButton").addEventListener("click", searchForStudent);
-}
+// function saveDep() {
+//     let searchId = document.getElementById("searchInput").value;
+    
+//     for (let i = 0; i < studentArray.length; i++) {
+//         if (studentArray[i].id === searchId) {
+//             studentArray[i].department = document.getElementById("dropDep").value;
+//             localStorage.setItem("students", JSON.stringify(studentArray));
+//         }
+//     }
+// }
+//     // document.getElementById('saveDep').addEventListener('click', saveDep);
+//     document.onclick = function() {saveDep()};
+//     document.getElementById("searchButton").addEventListener("click", searchForStudent);

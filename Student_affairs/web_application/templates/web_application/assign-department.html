@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Affairs | Assign Department</title>
+    <script src="{% static 'js/assign-department.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,12 +30,12 @@
 
 <!--<hr>-->
     <div class="searchBox">
-
-        <input   id="searchInput"type="number"  placeholder="ID..." >
-        <button  id="searchButton" href="#">
-            <i class="material-icons"><img src="{% static 'photos/searchIcon.png' %}" style="width: 15px;height: 15px; padding-top: 4px;">
-            </i>
-        </button>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button id="searchButton" type="submit"><i class="material-icons"><img src="{% static 'photos/searchIcon.png' %}" style="width: 15px;height: 15px; padding-top: 4px;">
+            </i></button>
+        </form>
     </div>
 
     <h3 class="depTableName">Assign Department</h3>
@@ -52,9 +53,19 @@
 
         </thead>
         <tbody id="tbody">
+            <td id="sid" name="id">{{query.id}}</td>
+            <td>{{query.name}}</td>
+            <td>{{query.GPA}}</td>
+            <td>{{query.level}}</td>
+            {% if query.level == "1" or query.level == "2" %}
+                <td>General</td>
+            {% elif query.level == "3" or query.level == "4" %}
+                <td id="drop_down" name="dropDep">{{query.departement}}</td>
+                <script>drop_down()</script>
+            {% endif %}
         </tbody>
     </table>
-    <button class="saveDep"><span>Save</span></button>
-    <script src="../js/assign-department.js"></script>
+    
+    <button class="saveDep" onclick=saveOption()><span>Save</span></button>
 </body>
 </html>

@@ -52,21 +52,21 @@
       <form method="POST" action="">
         {% csrf_token %}
         <div class="user-box">
-          <input type="text" id="studentId" required value="" />
+          <input type="text" id="studentId" name="id" required value="" />
           <label for="studentId">ID</label>
         </div>
         <div class="user-box">
-          <input type="text" id="studentName" required value="" />
+          <input type="text" id="studentName" name="name" required value="" />
           <label for="studentName">Name</label>
         </div>
         <br />
         <div class="user-box">
-          <input type="date" id="studentDate" required value="" />
+          <input type="date" id="studentDate" name="birth_day" required value="" />
           <label for="studentDate">Date of Birth</label>
         </div>
         <br />
         <div class="user-box">
-          <input type="number"  id="studentGpa" required value="" max="4" />
+          <input type="number"  id="studentGpa" name="GPA" required value="" max="4" />
           <label for="studentGpa">GPA</label>
         </div>
         <br />
@@ -97,12 +97,12 @@
         </div>
         <br />
         <div class="user-box">
-          <input type="email" id="studentEmail" required value="" />
+          <input type="email" id="studentEmail" name="email" required value="" />
           <label for="studentEmail">Email</label>
         </div>
         <br />
         <div class="user-box">
-          <input type="phone" id="studentPhone" required value="" />
+          <input type="phone" id="studentPhone" name="phone" required value="" />
           <label for="studentPhone">Phone Number</label>
         </div>
         <button type="submit" onclick="addStudentToLocalStorage()">Submit</button>
