@@ -12,5 +12,7 @@ urlpatterns = [
     path('active-inactive-students.html', views.active_inactive_students, name="active-inactive-students"),
     path('update-department/', views.update_department, name='update_department'),
     path('delete-student/<str:pk>/', views.deleteStudent, name="delete-student"),
+    # path('delete-student/<int:pk>/', views.deleteStudent, name="delete-student"),
+    path('edit-student/<str:pk>/', views.editStudent, name="edit-student"),
 
 ]

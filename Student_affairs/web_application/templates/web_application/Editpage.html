@@ -32,29 +32,31 @@
     <div class = "insert-box">
         <h2> Edit Existing Student Data </h2>
         <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="user-box">
-                <input type="text" id="studentName"  >
+                <input type="text" id="studentName" value={{student.name}} name="name">
                 <label for="studentName">Student Name</label>
             </div>
             <br/>
 
             <div class="user-box">
-                <input type="date" id="studentDate" >
+                <input type="date" id="studentDate" value={{ student.birth_day|date:'Y-m-d' }} name="dob">
                 <label>Date of Birth</label>
             </div>
             <br/> 
 
             <div class="user-box">
-                <input type="number" id="studentGpa" max = "4" min="0">
+                <input type="number" id="studentGpa" max = "4" min="0" value={{student.GPA}} name="GPA">
                 <label >GPA</label>
             </div>
             <br/>
 
             <div id="studentGender" class="user-boxx">
                 <label>Gender: </label>
-                <input id="male" type="radio" name="gender" value="M" />
+                <input id="male" type="radio" name="gender" value="M" {% if student.gender == "male" %}checked{% endif %}/>
                 <label for="male">Male</label>
-                <input id="female" type="radio" name="gender" value="F" />
+
+                <input id="female" type="radio" name="gender" value="F" {% if student.gender == "female" %}checked{% endif %}/>
                 <label for="female">Female</label>
             </div>
             <br/>
@@ -62,47 +64,51 @@
             <div class="user-box">
                 <label for="studentLevel">Level:</label>
                 <select id="studentLevel" name = "studentLevel" >
-                    <option id="1" value="1">1</option>
-                    <option id="2" value="2">2</option>
-                    <option id="3" value="3">3</option>
-                    <option id="4" value="4">4</option>
+                    <option id="1" value="1" {% if student.level == "1" %}selected{% endif %}>1</option>
+                    <option id="2" value="2" {% if student.level == "2" %}selected{% endif %}>2</option>
+                    <option id="3" value="3" {% if student.level == "3" %}selected{% endif %}>3</option>
+                    <option id="4" value="4" {% if student.level == "4" %}selected{% endif %}>4</option>
                 </select>
             </div>
             <br/>
 
             <div id="studentStatus" class="user-boxx">
                 <label>Status: </label>
-                <input id="active" type="radio" name="status" value="active" />
+                <input id="active" type="radio" name="status" value="active" {% if student.status == "active" %}checked{% endif %}/>
                 <label for="active">Active</label>
-                <input id="inactive" type="radio" name="status" value="inactive" />
+                <input id="inactive" type="radio" name="status" value="inactive" {% if student.status == "inactive" %}checked{% endif %}/>
                 <label for="inactive">Inactive</label>
             </div>
             <br/>
 
             <div class="user-box">
-                <input type="text" id="departement" readonly>
+                <input type="text" id="departement" readonly value={{student.department}}>
                 <label for="departement">Departement</label>
             </div>
             <br/> 
 
             <div class="user-box">
-                <input type="email" id="studentEmail" >
+                <input type="email" id="studentEmail" value={{student.email}} name="email">
                 <label for="studentEmail">Email</label>
             </div>
             <br/> 
 
             <div class="user-box">
-                <input type="number" id="studentPhone" >
+                <input type="number" id="studentPhone" value={{student.phone}} name="phone">
                 <label for="studentId">Mobile Number</label>
             </div>
 
             <div class = "EditButton">
-                <button type="button" id="save" class = "save "> Save </button>
-                <button type="button" id="delete" class = "delete" onclick="myFunction()"> Delete </button>
+                <button id="save" class = "save" type="submit"> Save </button>
+
+                <a class='centerLink' href="{% url 'delete-student' student.id %}">
+                    <button id="delete" class = "delete" type="button"> Delete </button></a>
             </div>
-        </form>
+            </form>
+            <div class="EditButton">
+            </div>
     </div>
-    <script src="../js/EditPage.js"></script>
+    <!-- <script src="../js/EditPage.js"></script> -->
 </body>
 
 </html>

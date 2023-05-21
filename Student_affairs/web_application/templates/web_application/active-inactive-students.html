@@ -38,9 +38,30 @@
                     <th>Full Name</th>
                     <th>GPA</th>
                     <th>Level</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody id="tableBody">
+            {% for student in students %}
+            <tr>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    
+                    <td id={{student.id}}><label class='switch'><input type='checkbox' {% if student.status == 'Active' %}checked {% endif %} name="status"><span class='slider round'> </span></label></td>
+                    
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.GPA}}</td>
+                    <td>{{student.level}}</td>
+
+                    <input type="text" hidden value={{student.id}} name="id">
+                    <td>
+                        <button class='Edit-S' type="submit"><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button>
+                    </td>
+                </form>
+                
+            </tr>
+            {% endfor %}
             </tbody>
         </table>
         

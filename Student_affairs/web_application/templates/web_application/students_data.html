@@ -57,7 +57,7 @@
                 <td>{{student.email}}</td>
                 <td>{{student.department}}</td>
                 <td>
-                  <a class='centerLink' href='Editpage.html?id=" + student.id + "'><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a>
+                  <a class='centerLink' href="{% url 'edit-student' student.id %}"><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a>
 
                     <a class='centerLink' href="{% url 'delete-student' student.id %}">
                       <button class='Delet-S' type="Submit" ><i class='fa fa-fw fa-trash'></i></button></a>
