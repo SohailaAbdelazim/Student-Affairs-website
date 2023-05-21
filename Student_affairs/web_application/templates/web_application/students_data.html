@@ -39,7 +39,7 @@
               <th id="studentStatus">Status</th>
               <th id="studentDate">Birth Day</th>
               <th id="studentEmail">E-Mail</th>
-              <th id="Departement">Departement</th>
+              <th id="Departement">Department</th>
               <th ></th>
             </tr>
           </thead>
@@ -55,10 +55,12 @@
                 <td>{{student.status}}</td>
                 <td>{{student.birth_day}}</td>
                 <td>{{student.email}}</td>
-                <td>{{student.departement}}</td>
+                <td>{{student.department}}</td>
                 <td>
-                  
-                  <a class='centerLink' href='Editpage.html?id=" + student.id + "'><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a> <a class='centerLink'><button class='Delet-S' onclick='deleteFunction()'><i class='fa fa-fw fa-trash'></i></button></a>
+                  <a class='centerLink' href='Editpage.html?id=" + student.id + "'><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a>
+
+                    <a class='centerLink' href="{% url 'delete-student' student.id %}">
+                      <button class='Delet-S' type="Submit" ><i class='fa fa-fw fa-trash'></i></button></a>
                 </td>
               </tr>
             {% endfor %}

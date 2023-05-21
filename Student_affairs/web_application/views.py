@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Student
 from django.views.decorators.csrf import csrf_protect
 from django import forms
 from django.http import HttpResponse
+from django.http import JsonResponse
 
 
 class MyForm(forms.Form):
@@ -31,7 +32,7 @@ def addNewStudent(request):
         gender = request.POST.get('gender')
         level = request.POST.get('level')
         status = request.POST.get('status')
-        # department = request.POST.get('departement')
+        # department = request.POST.get('department')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         data = Student(id=id,name = name,birth_day = birth_day,gender = gender,email = email,phone = phone, status = status, GPA = GPA,level = level)
@@ -41,6 +42,7 @@ def addNewStudent(request):
 
 def Editpage(request):
     return render(request,'web_application/Editpage.html')
+
 
 
 def assignDepartment(request):
@@ -56,24 +58,23 @@ def assignDepartment(request):
     return render(request,'web_application/assign-department.html', {'form': form})
 
 
+@csrf_protect
+def update_department(request):
+    selected_department = request.POST.get('drop-dep')
+    sid = request.POST.get('student-id')
+    print(sid)
+    print(selected_department)
 
-def save_option(request):
-    if request.method == 'POST':
-        selected_option = request.POST.get('dropDep')
-        sid = request.POST.get('id')
-        # Save the selected option to the database
-        obj = Student.objects.get(id=sid)
+    try:
+        your_instance = Student.objects.get(id=sid)
+        your_instance.department = selected_department
+        your_instance.save()
 
-        # Update the object with new data
-        obj.departement = selected_option
-        # Add other fields as needed
-
-        # Save the object
-        obj.save()
-        # Your saving logic here    
-        return HttpResponse("Option saved successfully.")
-    else:
-        return HttpResponse("Invalid request method.")
+        print(your_instance)
+        return JsonResponse({'message': 'Department updated successfully!'})
+    except Student.DoesNotExist:
+        print("aaaaa")
+        return JsonResponse({'message': 'Department not found.'})
 
 
 def active_inactive_students(request):
@@ -83,3 +84,11 @@ def active_inactive_students(request):
 def Student_data(request):
     students = Student.objects.all()
     return render(request, 'web_application/students_data.html', {'students': students})
+
+
+def deleteStudent(request, pk):
+    student = Student.objects.get(id=pk)
+    print(student)
+    student.delete()
+    return redirect('student_data')
+

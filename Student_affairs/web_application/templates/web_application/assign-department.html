@@ -52,20 +52,23 @@
             </tr>
 
         </thead>
+
+        
         <tbody id="tbody">
-            <td id="sid" name="id">{{query.id}}</td>
+            <td id="sid" name="student-id">{{query.id}}</td>
             <td>{{query.name}}</td>
             <td>{{query.GPA}}</td>
             <td>{{query.level}}</td>
             {% if query.level == "1" or query.level == "2" %}
                 <td>General</td>
             {% elif query.level == "3" or query.level == "4" %}
-                <td id="drop_down" name="dropDep">{{query.departement}}</td>
+                <td id="drop_down" name="dropDep">{{query.department}}</td>
                 <script>drop_down()</script>
             {% endif %}
         </tbody>
     </table>
-    
-    <button class="saveDep" onclick=saveOption()><span>Save</span></button>
+
+    <button class="saveDep" onclick=saveOption()>
+        <span>Save</span></button>
 </body>
 </html>

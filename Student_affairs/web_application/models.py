@@ -12,4 +12,4 @@ class Student(models.Model):
     status = models.CharField(max_length=10)
     birth_day = models.DateField()
     email = models.CharField(max_length=50)
-    departement = models.CharField(max_length=20)
+    department = models.CharField(max_length=20, default='General')

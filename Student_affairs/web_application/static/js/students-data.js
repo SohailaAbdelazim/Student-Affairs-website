@@ -60,4 +60,9 @@ function deleteconfirmation() {
   } else {
     console.log("not confirmed!")
   }
-} 
+}
+
+function deleteFunction(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("myTable").deleteRow(i);
+}
