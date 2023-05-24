@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from .models import Student
+#from web_application.models import Student
 from django.views.decorators.csrf import csrf_protect
 from django import forms
 from django.http import HttpResponse
