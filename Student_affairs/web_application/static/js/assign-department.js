@@ -1,28 +1,3 @@
-// search = function () {
-//     let searchId = document.getElementById("searchInput").value;
-//     if (searchId) {
-//         let form = document.createElement("form");
-//         form.method = "post";
-//         form.action = "";
-//         let csrf_token = document.createElement("input");
-//         csrf_token.type = "hidden";
-//         csrf_token.name = "csrfmiddlewaretoken";
-//         csrfToken.value = '{{ csrf_token }}';
-
-//         var idInputField = document.createElement('input');
-//         idInputField.type = 'hidden';
-//         idInputField.name = 'id_input';
-//         idInputField.value = idInput;
-
-//         form.appendChild(csrfToken);
-//         form.appendChild(idInputField);
-
-//         document.body.appendChild(form);
-//         form.submit();
-//     }
-// }
-// document.getElementById('search_button').addEventListener('click', search);
-
 
 function drop_down() {
         let table = '';
@@ -51,6 +26,7 @@ function saveOption() {
     xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
         console.log('Department updated successfully!');
+        // window.location.href = '/http://127.0.0.1:8000/students-data.html/';
     } else {
         console.error('Error updating department:', xhr.status);
     }

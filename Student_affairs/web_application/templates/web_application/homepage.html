@@ -44,16 +44,12 @@
             ><i class="fa fa-toggle-on"></i> Active/inactive Students</a
             >
         </li>
+        <li>
+            <a href="{% url 'logout' %}">
+            <i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
         </ul>
     </nav>
-    </div>
-    <div class="dropdown">
-    <button type="button" onclick="dropdown()" class="dropbtn">
-        <i class="fa-solid fa-right-from-bracket"></i>
-    </button>
-    <div id="myDropdown" class="dropdown-content">
-        <a href="websitepage.html">Logout</a>
-    </div>
     </div>
 </header>
     <div class="welcome-div">
@@ -64,6 +60,5 @@
     src="https://kit.fontawesome.com/1457508b99.js"
     crossorigin="anonymous"
     ></script>
-    <script src="{% static 'js/students-data.js' %}"></script>
 </body>
 </html>

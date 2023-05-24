@@ -1,10 +1,13 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from .models import Student
+from django.contrib import messages
 #from web_application.models import Student
 from django.views.decorators.csrf import csrf_protect
 from django import forms
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.contrib.auth import authenticate, login, logout
 
 
 class MyForm(forms.Form):
@@ -15,8 +18,33 @@ def Web_site(request):
     return render(request, 'web_application/websitepage.html')
 
 
-def login(request):
+def loginPage(request):
+    if request.user.is_authenticated:
+        return redirect('home_page')
+
+    if request.method == "POST":
+        username = request.POST.get('username').lower()
+        password = request.POST.get('password')
+
+        try:
+            user = User.objects.get(username=username)
+        except:
+            messages.error(request, 'User Doesnt exist')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('home_page')
+        else:
+            messages.error(request, 'Username Or Password does not exist')
+
     return render(request, 'web_application/login.html')
+
+
+def logoutPage(request):
+    logout(request)
+    return redirect("login")
 
 
 def Home_page(request):
@@ -59,6 +87,7 @@ def assignDepartment(request):
             
             except:
                 return render(request,'web_application/assign-department.html', {'form': form})
+            
     else:
         form = MyForm()
     return render(request,'web_application/assign-department.html', {'form': form})
@@ -73,8 +102,9 @@ def update_department(request):
         your_instance = Student.objects.get(id=sid)
         your_instance.department = selected_department
         your_instance.save()
-
-        return JsonResponse({'message': 'Department updated successfully!'})
+        
+        return redirect("student_data")
+        # return JsonResponse({'message': 'Department updated successfully!'})
     except Student.DoesNotExist:
         return JsonResponse({'message': 'Department not found.'})
 
@@ -121,6 +151,7 @@ def editStudent(request, pk):
 
 
 def deleteStudent(request, pk):
+    
     student = Student.objects.get(id=pk)
     student.delete()
     return redirect('student_data')

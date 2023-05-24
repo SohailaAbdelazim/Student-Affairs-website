@@ -3,7 +3,6 @@
     <head>
       <meta charset="UTF-8"/>
       <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-      <script src="{% static 'js/students-data.js' %}"></script>
       <title>Student Affairs | Student Data </title>
       <link rel="icon" sizes="192x192" href="{% static 'photos/Header.png'%}">
       
@@ -11,22 +10,43 @@
         <div class="clr"></div>
     </head>
     <body id="body">
-      <header> 
+      <header>
         <div class="logo">
-          <img src="{% static 'photos/Logo.jpg' %}" alt="Logo">
-      </div>
-        <div class = "container"> 
-          <nav class = "navbar">
-            <ul> 
-              <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Homepage</a> </li>
-              <li> <a href="add-new-student.html"><i class="fa fa-user-plus"></i> Add New student</a> </li>   
-              <li> <a href="students-data.html"><i class="fa fa-folder"></i> Students Data</a> </li>
-              <li> <a href="assign-department.html"><i class="fa fa-edit"></i> Assign Department </a> </li>  
-              <li> <a href="active-inactive-students.html"><i class="  fa fa-toggle-on"></i> Active/inactive Students</a> </li> 
-            </ul>
-          </nav> 
+        <img src="{% static 'photos/Logo.jpg' %}" alt="FCAI-CU" />
         </div>
-        <div class="clr"></div>
+        <div class="containerr">
+        <nav class="navbar">
+            <ul>
+            <li>
+                <a href="./homepage.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
+            </li>
+            <li>
+                <a href="./add-new-student.html"
+                ><i class="fa fa-user-plus"></i> Add New student</a
+                >
+            </li>
+            <li>
+                <a href="./students-data.html"
+                ><i class="fa fa-folder"></i> Students Data</a
+                >
+            </li>
+            <li>
+                <a href="./assign-department.html"
+                ><i class="fa fa-edit"></i> Assign Department
+                </a>
+            </li>
+            <li>
+                <a href="./active-inactive-students.html"
+                ><i class="fa fa-toggle-on"></i> Active/inactive Students</a
+                >
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">
+                <i class="fa-solid fa-right-from-bracket"></i></a>
+            </li>
+            </ul>
+        </nav>
+        </div>
     </header>
       <h3 class="tableName">Students Data</h2>
         <table class="table" style="width:99%" id="myTable">
@@ -59,10 +79,11 @@
                 <td>{{student.email}}</td>
                 <td>{{student.department}}</td>
                 <td>
-                  <a class='centerLink' href="{% url 'edit-student' student.id %}"><button class='Edit-S' onclick='edit()'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a>
+                  <a class='centerLink' href="{% url 'edit-student' student.id %}"><button class='Edit-S'><img class='edit_img_S' src="{% static 'photos/edit.png' %}"></button></a>
 
                     <a class='centerLink' href="{% url 'delete-student' student.id %}">
                       <button class='Delet-S' type="Submit" ><i class='fa fa-fw fa-trash'></i></button></a>
+                      
                 </td>
               </tr>
             {% endfor %}
@@ -71,4 +92,8 @@
         </div>
         <div class="clr"></div>
     </body>
+    <script
+    src="https://kit.fontawesome.com/1457508b99.js"
+    crossorigin="anonymous"
+    ></script>
 </html>
