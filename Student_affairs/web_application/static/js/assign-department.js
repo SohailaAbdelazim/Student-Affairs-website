@@ -23,20 +23,19 @@ function saveOption() {
     // Include the CSRF token in the request header
     xhr.setRequestHeader('X-CSRFToken', getCookie('csrftoken'));
 
+
     xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
         console.log('Department updated successfully!');
-        // window.location.href = '/http://127.0.0.1:8000/students-data.html/';
+        window.location.href = '/students-data.html';
     } else {
         console.error('Error updating department:', xhr.status);
     }
     };
-    // xhr.send('department=' + encodeURIComponent(selectedOption));
     xhr.send('drop-dep=' + encodeURIComponent(selectedOption) + '&student-id=' + encodeURIComponent(selectedOption2));
-    
 }
 
-  // Function to retrieve the CSRF token cookie
+// Function to retrieve the CSRF token cookie
 function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {

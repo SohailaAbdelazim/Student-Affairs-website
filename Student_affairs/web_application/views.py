@@ -79,8 +79,7 @@ def assignDepartment(request):
     if request.method == 'POST':
         form = MyForm(request.POST)
         if form.is_valid():
-            sid = form.cleaned_data['id']
-            # Do something with my_variable
+            sid = form.data['id']
             try:
                 query = Student.objects.get(id=sid)
                 return render(request, 'web_application/assign-department.html', {"query": query, 'form': form})
@@ -102,9 +101,9 @@ def update_department(request):
         your_instance = Student.objects.get(id=sid)
         your_instance.department = selected_department
         your_instance.save()
-        
+
         return redirect("student_data")
-        # return JsonResponse({'message': 'Department updated successfully!'})
+        #return JsonResponse({'message': 'Department updated successfully!'})
     except Student.DoesNotExist:
         return JsonResponse({'message': 'Department not found.'})
 

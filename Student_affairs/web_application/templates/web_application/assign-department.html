@@ -44,22 +44,36 @@
             </li>
             <li>
                 <a href="{% url 'logout' %}">
-                <i class="fa-solid fa-right-from-bracket"></i></a>
+                <i class="fa-solid fa-right-from-bracket"></i> Logout </a>
             </li>
             </ul>
         </nav>
         </div>
     </header>
 
-<!--<hr>-->
-    <div class="searchBox">
-        <form method="post">
-            {% csrf_token %}
-            {{ form }}
-            <button id="searchButton" type="submit"><i class="material-icons"><img src="{% static 'photos/searchIcon.png' %}" style="width: 15px;height: 15px; padding-top: 4px;">
-            </i></button>
-        </form>
-    </div>
+    <style>
+        .input-field {
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+    </style>
+        
+        <div class="searchBox">
+            <form method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>
+                        <input type="text" name="id" required id="id_id" class="input-field" placeholder="Student ID....">
+                    </td>
+                </tr>
+                <button id="searchButton" type="submit">
+                    <i class="material-icons">
+                        <img src="/static/photos/searchIcon.png" style="width: 15px;height: 15px; padding-top: 4px;">
+                    </i>
+                </button>
+            </form>
+        </div> 
 
     <h3 class="depTableName">Assign Department</h3>
 
@@ -90,9 +104,12 @@
             {% endif %}
         </tbody>
     </table>
-
-    <button type="submit" class="saveDep" onclick=saveOption()>
-        <span>Save</span></button>
+    <form method="POST" action="{% url 'update_department' %}">
+        {% csrf_token %}
+        <button type="button" class="saveDep" onclick="saveOption()">
+           <span>Save</span>
+        </button>
+    </form>
 </body>
 <script
     src="https://kit.fontawesome.com/1457508b99.js"
