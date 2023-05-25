@@ -1,4 +1,4 @@
-@media screen and (min-width: 480px){
+
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 .container {
@@ -103,6 +103,8 @@ nav a:hover::before {
 .insert-box {
   justify-content: center;
   margin: 80px 40px;
+  margin-right: auto;
+  margin-left: auto;
   width: 800px;
   height: 920px;
   padding: 40px;
@@ -368,4 +370,3 @@ p {
   -webkit-transform: translateY(0px);
 }
 
-}
