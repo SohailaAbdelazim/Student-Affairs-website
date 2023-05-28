@@ -102,11 +102,11 @@ nav a:hover::before {
 /* Insert Box */
 .insert-box {
   justify-content: center;
-  margin: 80px 40px;
+  margin: 100px 40px;
   margin-right: auto;
   margin-left: auto;
   width: 800px;
-  height: 920px;
+  height: 900px;
   padding: 40px;
   position: absolute;
   top: 68%;
@@ -115,7 +115,7 @@ nav a:hover::before {
   background:  #cedded;
   box-shadow: 0 15px 15px #457b9d;
   border-radius: 20px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .insert-box h2 {
   margin: 0 0 30px;
@@ -370,3 +370,12 @@ p {
   -webkit-transform: translateY(0px);
 }
 
+@media screen and (max-width: 1000px) {
+  .insert-box {
+    margin-top: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    height: 900px;
+  }
+}
