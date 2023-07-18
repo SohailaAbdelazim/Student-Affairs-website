@@ -27,6 +27,11 @@
 - [Mohamed Ahmed](https://github.com/abdelghany-74)
 
 # Extra Details About the project 
+- languages & teqniques used:
+  - html
+  - css
+  - javascript
+  - Django
 - Under supervision of:
   - Doctor: Neamat El Tazi , Laila Esheiba
   - TA: Amany Adel
